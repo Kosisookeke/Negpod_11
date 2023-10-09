@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #select emails of student
-FILE="students-list_0333.txt"
+FILE="students-list_0923.txt"
 
 #function to get Emails
 get_Emails(){
