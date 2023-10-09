@@ -1,1 +1,0 @@
-{STUDENTEMAIL:d.itu@alustudent.com, AGE:25, STUDENTID:fdf}
