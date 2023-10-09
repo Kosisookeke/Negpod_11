@@ -9,16 +9,16 @@ read -r STUDENTID
 
 while true;
 do
-	CHECKID=$(grep -Eio "$STUDENTID" students-list_0333.txt)
-	CHECKEMAIL=$(grep -Eio "$STUDENTEMAIL" students-list_0333.txt)
+	CHECKID=$(grep -Eio "$STUDENTID" students-list_0923.txt)
+	CHECKEMAIL=$(grep -Eio "$STUDENTEMAIL" students-list_0923.txt)
 
 	if [[ "$STUDENTID" = "$CHECKID" || "$STUDENTEMAIL" = "$CHECKEMAIL" ]];
 	then
 		echo "This email or id already exists"
-		grep -Ewi "$STUDENTID" students-list_0333.txt || grep -Ewi "$STUDENTEMAIL" students-list_0333.txt
+		grep -Ewi "$STUDENTID" students-list_0923.txt || grep -Ewi "$STUDENTEMAIL" students-list_0923.txt
 		sleep 2
 	else
-		echo "{STUDENTEMAIL:$STUDENTEMAIL, AGE:$AGE, STUDENTID:$STUDENTID}" >> "students-list_0333.txt"
+		echo "{STUDENTEMAIL:$STUDENTEMAIL, AGE:$AGE, STUDENTID:$STUDENTID}" >> "students-list_0923.txt"
 		echo "created successfully..."
 		exit 1
 	fi
