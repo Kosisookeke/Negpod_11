@@ -1,15 +1,12 @@
-#!/bin/bash
+# Configuration for variables
+source_directory="negpod_0-q1"
+username="2f05c1f8800b"
+host="2f05c1f8800b.3be8ebfc.alu-cod.online"
+password="d4a1d225d0abda9549d8"
+dest="summative/0923-2023S"
 
-# Remote server details
-remote_host="2f05c1f8800b.3be8ebfc.alu-cod.online"
-remote_username="2f05c1f8800b"
-remote_password="d4a1d225d0abda9549d8"
-remote_directory="/summative/0923-2023s"
+# Create the destination directory on the remote server if it doesn't exist
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no "$username@$host" "mkdir -p /summative/0923-2023S"
 
-# Source directory to back up
-source_directory="Negpod_11-q1"
-
-# Rsync command to perform the backup
-rsync -avz -e "sshpass -p $remote_password ssh -o StrictHostKeyChecking=no" "$source_directory" "$remote_username"@"$remote_host":"$remote_directory"/
-
-echo "Backup completed to $remote_host:$remote_
+# Use rsync to backup the directory to the alu-cod.online server
+rsync -avz --delete -e "sshpass -p $password ssh -o StrictHost
