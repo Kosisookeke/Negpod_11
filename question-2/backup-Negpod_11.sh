@@ -1,24 +1,15 @@
-#!/usr/bin/env bash
-# backing up our directory on another computer system or server
+#!/bin/bash
 
 # Remote server details
-HOST="2f05c1f8800b.3be8ebfc.alu-cod.online"
-USERNAME="2f05c1f8800b"
+remote_host="2f05c1f8800b.3be8ebfc.alu-cod.online"
+remote_username="2f05c1f8800b"
+remote_password="d4a1d225d0abda9549d8"
+remote_directory="/summative/0923-2023s"
 
-# Directory to be backed up
-SOURCE_DIR="backup-Negpod_1.sh"
+# Source directory to back up
+source_directory="Negpod_11-q1"
 
-# Location for backup on the remote server
-REMOTE_DIR="summative/0923-2023S"
+# Rsync command to perform the backup
+rsync -avz -e "sshpass -p $remote_password ssh -o StrictHostKeyChecking=no" "$source_directory" "$remote_username"@"$remote_host":"$remote_directory"/
 
-# Backup file name
-BACKUP_FILE="${SOURCE_DIR}.tar.gz"
-
-# Compress the source directory into a tarball
-tar -czf "${BACKUP_FILE}" "${SOURCE_DIR}"
-
-# Upload the backup file to the remote server using SCP
-scp "${BACKUP_FILE}" "${USERNAME}@${HOST}:${REMOTE_DIR}"
-
-# Clean up the local backup file
-rm "${BACKUP_FILE}
+echo "Backup completed to $remote_host:$remote_
