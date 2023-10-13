@@ -1,11 +1,9 @@
-#!/usr/bin/env bash
-#automatically move files to negpod_id-q1
-LIST=$(ls /alu-summatives/question-1/)
-mkdir "backup-Negpod_11.sh"
-for FILE in $LIST;
-do
-	if [ -a "/alu-summatives/question-1/$FILE" ];
-	then
-		cp "/alu-summatives/question-1/$FILE" "backup-Negpod_11.sh"
-	fi
-done	
+#!/bin/bash
+
+# Create the directory name
+mkdir -p "Negpod_11.sh"
+
+# Move the files to the target directory
+mv main.sh "students-list_0923.txt" select-emails.sh "student-emails.txt" "Negpod_11.sh"/
+
+echo "Files moved to  "Negpod_11.sh"
