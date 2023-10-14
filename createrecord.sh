@@ -6,19 +6,19 @@ echo "Please input your age:"
 read -r AGE
 echo "Please input your studentid:"
 read -r STUDENTID
-
+folder="Students-list_0923.txt"
 while true;
 do
-	CHECKID=$(grep -Eio "$STUDENTID" students-list_0923.txt)
-	CHECKEMAIL=$(grep -Eio "$STUDENTEMAIL" students-list_0923.txt)
+	CHECKID=$(grep -Eio "$STUDENTID" Students-list_0923.txt)
+	CHECKEMAIL=$(grep -Eio "$STUDENTEMAIL" Students-list_0923.txt)
 
 	if [[ "$STUDENTID" = "$CHECKID" || "$STUDENTEMAIL" = "$CHECKEMAIL" ]];
 	then
 		echo "This email or id already exists"
-		grep -Ewi "$STUDENTID" students-list_0923.txt || grep -Ewi "$STUDENTEMAIL" students-list_0923.txt
+		grep -Ewi "$STUDENTID" students-list_0923.txt || grep -Ewi "$STUDENTEMAIL" $folder
 		sleep 2
 	else
-		echo "{STUDENTEMAIL:$STUDENTEMAIL, AGE:$AGE, STUDENTID:$STUDENTID}" >> "students-list_0923.txt"
+		echo "{STUDENTEMAIL:$STUDENTEMAIL, AGE:$AGE, STUDENTID:$STUDENTID}" >> $folder
 		echo "created successfully..."
 		exit 1
 	fi

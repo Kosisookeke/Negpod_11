@@ -1,0 +1,1 @@
+{STUDENTEMAIL:ch@gmail.com, AGE:12, STUDENTID:32}

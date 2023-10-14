@@ -2,7 +2,6 @@
 {STUDENTEMAIL:c.unekwe@alustudent.com, AGE:29, STUDENTID:672035}
 {STUDENTEMAIL:pzigira@alustudent.com, AGE:35, STUDENTID:342023}
 {STUDENTEMAIL:kosisookeke74@gmail.com, AGE:34, STUDENTID:162035}
-{STUDENTEMAIL:a.umutoni@gmail.com, AGE:22, STUDENTID:122025}
 {STUDENTEMAIL:c.akotonimo@alustudent.com, AGE:25, STUDENTID:123456}
 {STUDENTEMAIL:g.munezero1@alustudent.com, AGE:17, STUDENTID:191871}
 {STUDENTEMAIL:n.asimwe@alustudent.com, AGE:25, STUDENTID:102023}

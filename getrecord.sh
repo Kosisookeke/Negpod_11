@@ -10,7 +10,7 @@ do
 		echo "you inputed $NUMBER, so no number of records can be shown."
 		read -r -p "Re-enter the number of records, number should be greater than zero: " NUMBER
 	else
-		grep -Ewi "$STUDENTID" students-list_0923.txt
+		grep -Ewi "$STUDENTID" Students-list_0923.txt
 	fi
 	((START++))
 done

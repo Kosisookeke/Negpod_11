@@ -11,6 +11,7 @@ do
     	echo "4. Update student record"
     	echo "5. Exit"
 	echo "6. to get records"
+	echo "7. backup your files"
     	echo "--------------------------------"
 	read -r -p "Enter your choice: " CHOICE
 	case "$CHOICE" in
@@ -38,6 +39,10 @@ do
 			echo "getting records..."
 			../getrecord.sh
 			;;
+		7)
+		    echo "starting backup"
+		    ./move-to-directory.sh
+		    ;;
 		*)
 			echo "invalid option"
 			echo "options are from 1 to 5"
