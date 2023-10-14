@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#delete students using id
+#delete student using id
 echo "give me student ID"
 read -r STUDENTID
 while true;
