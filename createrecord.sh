@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#create the student record
+#create the students record
 echo "Please input your student email:"
 read -r STUDENTEMAIL
 echo "Please input your age:"
